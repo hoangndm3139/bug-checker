@@ -1,16 +1,10 @@
 'use client';
-import MiniCalendar from 'components/calendar/MiniCalendar';
 
 import { IoMdHome } from 'react-icons/io';
 import { IoDocuments } from 'react-icons/io5';
 import { MdBarChart, MdDashboard } from 'react-icons/md';
 
 import Widget from 'components/widget/Widget';
-import CheckTable from 'components/admin/default/CheckTable';
-import ComplexTable from 'components/admin/default/ComplexTable';
-import TaskCard from 'components/admin/default/TaskCard';
-import tableDataCheck from 'variables/data-tables/tableDataCheck';
-import tableDataComplex from 'variables/data-tables/tableDataComplex';
 
 const Dashboard = () => {
   return (

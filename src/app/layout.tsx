@@ -1,8 +1,7 @@
-import React, { ReactNode } from 'react';
-import AppWrappers from './AppWrappers';
 import { Metadata } from 'next';
-// import '@asseinfo/react-kanban/dist/styles.css';
-// import '/public/styles/Plugins.css';
+import { ReactNode } from 'react';
+import AppWrappers from './AppWrappers';
+import PrivateLayout from './privateLayout';
 
 export const metadata: Metadata = {
   title: 'Bug Checker',
@@ -12,7 +11,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body id={'root'}>
-        <AppWrappers>{children}</AppWrappers>
+        <AppWrappers>
+          <PrivateLayout>
+            {children}
+          </PrivateLayout>
+        </AppWrappers>
       </body>
     </html>
   );

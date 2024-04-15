@@ -1,13 +1,9 @@
 'use client';
-import { PropsWithChildren, useState } from 'react';
-
-// Chakra imports
+import { PropsWithChildren } from 'react';
 
 // Layout components
-import { SidebarContext } from 'contexts/SidebarContext';
-import React from 'react';
-import { isWindowAvailable } from 'utils/navigation';
 import FixedPlugin from 'components/fixedPlugin/FixedPlugin';
+import { isWindowAvailable } from 'utils/navigation';
 
 // Custom Chakra theme
 

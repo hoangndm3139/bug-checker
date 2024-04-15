@@ -22,8 +22,6 @@ const ProfileOverview = () => {
           <Upload />
         </div>
       </div>
-      {/* all project & ... */}
-
       <div className="mb-4 grid h-full grid-cols-1 gap-5 lg:!grid-cols-12">
         <div className="col-span-5 lg:col-span-6 lg:mb-0 3xl:col-span-4">
           <Project />

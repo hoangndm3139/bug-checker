@@ -1,4 +1,3 @@
-// Chakra Imports
 // Custom Icons
 import React from 'react';
 

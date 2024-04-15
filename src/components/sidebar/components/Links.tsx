@@ -3,10 +3,8 @@ import DashIcon from 'components/icons/DashIcon';
 import NavLink from 'components/link/NavLink';
 import { usePathname } from 'next/navigation';
 import { useCallback } from 'react';
-// chakra imports
 
 export const SidebarLinks = (props: { routes: RoutesType[] }): JSX.Element => {
-  // Chakra color mode
   const pathname = usePathname();
 
   const { routes } = props;
@@ -21,12 +19,8 @@ export const SidebarLinks = (props: { routes: RoutesType[] }): JSX.Element => {
 
   const createLinks = (routes: RoutesType[]) => {
     return routes.map((route, index) => {
-      if (
-        route.layout === '/admin' ||
-        route.layout === '/auth'
-      ) {
         return (
-          <NavLink key={index} href={route.layout + '/' + route.path}>
+          <NavLink key={index} href={route.path}>
             <div className="relative mb-3 flex hover:cursor-pointer">
               <li
                 className="my-[3px] flex cursor-pointer items-center px-8"
@@ -55,7 +49,6 @@ export const SidebarLinks = (props: { routes: RoutesType[] }): JSX.Element => {
             </div>
           </NavLink>
         );
-      }
     });
   };
   // BRAND
