@@ -4,9 +4,19 @@ import { IoMdHome } from 'react-icons/io';
 import { IoDocuments } from 'react-icons/io5';
 import { MdBarChart, MdDashboard } from 'react-icons/md';
 
+import { useQuery } from '@tanstack/react-query';
 import Widget from 'components/widget/Widget';
 
 const Dashboard = () => {
+
+  const query = useQuery({
+    queryKey: ['todos'], queryFn: () => {
+      fetch('https://jsonplaceholder.typicode.com/todos/1')
+        .then(response => response.json())
+        .then(json => console.log(json))
+    }
+  })
+
   return (
     <div>
       {/* Card widget */}

@@ -1,5 +1,6 @@
 'use client';
 
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import Footer from 'components/footer';
 import Navbar from 'components/navbar';
 import Sidebar from 'components/sidebar';
@@ -12,12 +13,14 @@ import {
   isWindowAvailable,
 } from 'utils/navigation';
 
+const queryClient = new QueryClient()
+
 export default function PrivateLayout({ children }: { children: React.ReactNode }) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
   if (isWindowAvailable()) document.documentElement.dir = 'ltr';
-  
+
   return (
     <div className="flex h-full w-full bg-background-100 dark:bg-background-900">
       <Sidebar routes={routes} open={open} setOpen={setOpen} variant="admin" />
@@ -33,7 +36,9 @@ export default function PrivateLayout({ children }: { children: React.ReactNode 
               secondary={getActiveNavbar(routes, pathname)}
             />
             <div className="flex-1 p-2 !pt-[10px] md:p-2">
-              {children}
+              <QueryClientProvider client={queryClient}>
+                {children}
+              </QueryClientProvider>
             </div>
             <div className="p-3">
               <Footer />

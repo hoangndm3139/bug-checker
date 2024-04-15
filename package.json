@@ -5,18 +5,16 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@tanstack/react-query": "^5.29.2",
     "@tanstack/react-table": "^8.7.9",
+    "axios": "^1.6.8",
     "framer-motion": "^7.10.2",
-    "react": "^18.2.0",
-    "react-calendar": "^3.9.0",
     "next": "^14.0.2",
     "next-transpile-modules": "^9.0.0",
-    "react-custom-scrollbars-2": "^4.2.1",
+    "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
-    "react-router-dom": "^6.4.0",
     "react-scripts": "5.0.1",
-    "react-no-ssr": "^1.1.0",
     "typescript": "^4.7.4",
     "web-vitals": "^2.1.4"
   },
@@ -26,8 +24,7 @@
     "start": "next start",
     "export": "next export",
     "lint": "next lint",
-    "predeploy": "yarn run build",
-    "deploy": "gh-pages -d build"
+    "predeploy": "yarn run build"
   },
   "eslintConfig": {
     "extends": [
@@ -56,7 +53,6 @@
     "@types/react": "18.2.0",
     "@types/react-calendar": "^3.5.2",
     "@types/react-dom": "^18.2.1",
-    "@types/react-no-ssr": "^1.1.3",
     "@types/react-router-dom": "^5.3.3",
     "autoprefixer": "^10.4.16",
     "css-loader": "^6.7.1",
