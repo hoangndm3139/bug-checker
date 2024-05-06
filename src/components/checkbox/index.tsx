@@ -27,7 +27,7 @@ const Checkbox = (props: {
       justify-center rounded-md border border-gray-300 text-white/0 outline-none transition duration-[0.2s]
       checked:border-none checked:text-white hover:cursor-pointer dark:border-white/10 ${
         color === "red"
-          ? "checked:border-none checked:bg-red-500 dark:checked:bg-red-400"
+          ? "checked:border-none checked:bg-red-600 dark:checked:bg-red-400"
           : color === "blue"
           ? "checked:border-none checked:bg-blue-500 dark:checked:bg-blue-400"
           : color === "green"

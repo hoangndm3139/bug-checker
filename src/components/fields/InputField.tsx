@@ -38,7 +38,7 @@ function InputField(props: {
         type={type}
         id={id}
         placeholder={placeholder}
-        className={`${className} flex mt-5 h-12 w-full items-center justify-center rounded-xl border bg-[#F1F5F9] p-3 text-sm outline-none ${disabled === true
+        className={`${className} flex h-[45px] w-full items-center justify-center rounded-xl border bg-[#F1F5F9] p-3 text-sm outline-none ${disabled === true
           ? "!border-none !bg-gray-100 dark:!bg-white/5 dark:placeholder:!text-[rgba(255,255,255,0.15)]"
           : state === "error"
             ? "border-red-500 text-red-500 placeholder:text-red-500 dark:!border-red-400 dark:!text-red-400 dark:placeholder:!text-red-400"

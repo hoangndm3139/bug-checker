@@ -32,7 +32,6 @@ function SignInDefault() {
             </div>
             {/* Email */}
             <InputField
-              variant="auth"
               extra="mb-3"
               label="Email*"
               placeholder="mail@simmmple.com"
@@ -42,7 +41,6 @@ function SignInDefault() {
 
             {/* Password */}
             <InputField
-              variant="auth"
               extra="mb-3"
               label="Password*"
               placeholder="Min. 8 characters"

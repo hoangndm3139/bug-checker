@@ -30,7 +30,7 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
     <div className="flex flex-col h-screen w-full bg-[#F1F5F9] dark:bg-background-900">
       <Navbar />
       <div className='bg-white h-[69px] pl-[70px] pr-[27px] flex justify-between items-center'>
-        <SubNavBar />
+        {isNestedRoute(pathname) ? <SubNavBar /> : <MainNavBar />}
       </div>
       <div className="font-dm flex-1">
         <main className="h-full w-full">
@@ -107,7 +107,7 @@ const SubNavBar = () => {
   return (
     <>
       <div className="flex gap-6">
-        <Button isIconOnly className="bg-white border" ><AiOutlineLeft /></Button>
+        <Button isIconOnly className="bg-white border" onClick={() => { window.history.back() }}><AiOutlineLeft /></Button>
         <div className="flex gap-[14px]">
           <Image alt="ic_prj" src="/img/ic_mock_project.png" width={30} height={30} />
           <div className="flex flex-col">

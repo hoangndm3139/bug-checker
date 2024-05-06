@@ -1,11 +1,11 @@
 'use client';
 
 import InputField from '../../../components/fields/InputField';
-import ProjectItem from '../component/projectItem';
+import Project from '../../../components/privatePages/project';
 
 const Projects = () => {
   return (
-    <div className='pl-5 pr-[25px] pt-4 h-full relative '>
+    <div className='pl-5 pr-[25px] pt-4 h-full relative'>
       <InputField
         id="search"
         placeholder="Search projects..."
@@ -21,7 +21,7 @@ const Projects = () => {
         </span>
       </div>
       <div className='mt-[31px]'>
-        <ProjectItem />
+        <Project />
       </div>
     </div>
   );

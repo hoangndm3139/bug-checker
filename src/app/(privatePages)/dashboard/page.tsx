@@ -1,7 +1,7 @@
 'use client';
 
 import InputField from '../../../components/fields/InputField';
-import ProjectItem from '../component/projectItem';
+import Project from '../../../components/privatePages/project';
 
 const Dashboard = () => {
   return (
@@ -21,7 +21,7 @@ const Dashboard = () => {
         </span>
       </div>
       <div className='mt-[31px]'>
-        <ProjectItem />
+        <Project />
       </div>
     </div>
   );
