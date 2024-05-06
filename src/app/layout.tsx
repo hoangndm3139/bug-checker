@@ -1,7 +1,7 @@
+import { NextUIProvider } from "@nextui-org/system";
 import { Metadata } from 'next';
 import { ReactNode } from 'react';
 import AppWrappers from './AppWrappers';
-import PrivateLayout from './privateLayout';
 
 export const metadata: Metadata = {
   title: 'Bug Checker',
@@ -12,9 +12,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en">
       <body id={'root'}>
         <AppWrappers>
-          <PrivateLayout>
+          <NextUIProvider>
             {children}
-          </PrivateLayout>
+          </NextUIProvider>
         </AppWrappers>
       </body>
     </html>

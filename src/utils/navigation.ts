@@ -21,7 +21,7 @@ export const findCurrentRoute = (
 
 export const getActiveRoute = (routes: IRoute[], pathname: string): string => {
   const route = findCurrentRoute(routes, pathname);
-  return route?.name || 'Main Dashboard';
+  return route?.name || 'Projects';
 };
 
 export const getActiveNavbar = (
@@ -38,3 +38,5 @@ export const getActiveNavbarText = (
 ): string | boolean => {
   return getActiveRoute(routes, pathname) || false;
 };
+
+export const isNestedRoute = (pathname: string) => pathname.split("/").length > 2

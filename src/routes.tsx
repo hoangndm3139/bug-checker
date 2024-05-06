@@ -1,37 +1,25 @@
-import React from 'react';
-
-// Admin Imports
-
-// Icon Imports
-import {
-  MdHome,
-  MdOutlineShoppingCart,
-  MdBarChart,
-  MdPerson,
-  MdLock,
-} from 'react-icons/md';
+import Image from 'next/image';
 
 const routes = [
   {
-    name: 'Main Dashboard',
+    name: 'Projects',
+    path: 'projects',
+    icon: <Image
+      src="/svg/ic_projects.svg"
+      width={25}
+      height={25}
+      alt="ic_projects"
+    />,
+  },
+  {
+    name: 'Dashboard',
     path: 'dashboard',
-    icon: <MdHome className="h-6 w-6" />,
+    icon: <Image
+      src="/svg/ic_monitor.svg"
+      width={25}
+      height={25}
+      alt="ic_monitor"
+    />,
   },
-  // {
-  //   name: 'Data Tables',
-  //   layout: '/admin',
-  //   icon: <MdBarChart className="h-6 w-6" />,
-  //   path: 'data-tables',
-  // },
-  {
-    name: 'Profile',
-    path: 'profile',
-    icon: <MdPerson className="h-6 w-6" />,
-  },
-  {
-    name: 'Sign In',
-    path: 'sign-in',
-    icon: <MdLock className="h-6 w-6" />,
-  }
 ];
 export default routes;
