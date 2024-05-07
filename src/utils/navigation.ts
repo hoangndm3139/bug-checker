@@ -1,5 +1,5 @@
 import { IRoute } from 'types/navigation';
-import Router from 'next/router';
+import routes from '../routes';
 
 // NextJS Requirement
 export const isWindowAvailable = () => typeof window !== 'undefined';
@@ -39,4 +39,9 @@ export const getActiveNavbarText = (
   return getActiveRoute(routes, pathname) || false;
 };
 
-export const isNestedRoute = (pathname: string) => pathname.split("/").length > 2
+export const isNestedRoute = (pathname: string, slug: string | string[]) => pathname.split("/").length > 2 && !!slug
+
+export function getPathFromPathname(pathname: string) {
+  const route = routes.find(route => pathname.startsWith(route.path));
+  return route ? route.path : "admin/projects";
+}

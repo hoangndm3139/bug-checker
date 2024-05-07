@@ -16,7 +16,7 @@ function ProjectDetail({ params }: { params: { id: string } }) {
                     }}
                     extra="flex-1"
                 />
-                <Button startContent={<Image src={"/svg/ic_export.svg"} alt={"ic_export"} width={25} height={25} />} className="bg-white border" >Export</Button>
+                <Button aria-label="export" startContent={<Image src={"/svg/ic_export.svg"} alt={"ic_export"} width={25} height={25} />} className="bg-white border" >Export</Button>
             </div>
 
             <div className='mt-[31px]'>

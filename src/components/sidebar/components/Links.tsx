@@ -4,16 +4,14 @@ import NavLink from 'components/link/NavLink';
 import { usePathname } from 'next/navigation';
 import { useCallback } from 'react';
 import { IoChevronForwardSharp } from 'react-icons/io5';
-import { isNestedRoute } from '../../../utils/navigation';
 
 export const SidebarLinks = (props: { routes: RoutesType[] }): JSX.Element => {
   const pathname = usePathname();
-
   const { routes } = props;
 
   const activeRoute = useCallback(
     (routeName: string) => {
-      return (pathname?.includes(routeName) || isNestedRoute(pathname));
+      return (pathname?.includes(routeName));
     },
     [pathname],
   );
@@ -42,7 +40,6 @@ export const SidebarLinks = (props: { routes: RoutesType[] }): JSX.Element => {
               </div>
               <IoChevronForwardSharp />
             </li>
-
           </div>
         </NavLink>
       );
