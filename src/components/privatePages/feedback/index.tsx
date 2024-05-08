@@ -20,6 +20,8 @@ function Feedback() {
     const [isSelected, setIsSelected] = useState(false);
     const [status, setStatus] = useState("open");
     const pathname = usePathname();
+    console.log(pathname);
+    
 
     return (
         <div className="bg-white h-[69px] border-b border-[#D5D9DE80] p-4 flex justify-between items-center">
@@ -27,7 +29,7 @@ function Feedback() {
                 <Checkbox isSelected={isSelected} onValueChange={setIsSelected} />
                 <Image alt="ic_prj" src="/img/ic_mock_project.png" width={30} height={30} />
                 <Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026024d" className="w-6 h-6 text-tiny" />
-                <Link className="font-medium" href={`${pathname}/1`}>Testing project</Link>
+                <Link className="font-medium" href={`${pathname}/2`}>Testing project</Link>
             </div>
             <div className="flex gap-[25px] items-center">
                 <div className="flex gap-[17px]">

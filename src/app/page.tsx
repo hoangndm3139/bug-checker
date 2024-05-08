@@ -5,7 +5,7 @@ export default function Home({}) {
   const { userId }: { userId: string | null } = auth();
 
   if (!userId) {
-    redirect('/auth/sign-in');
+    redirect('/auth/login');
   }
   
   redirect('/admin/projects');

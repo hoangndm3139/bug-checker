@@ -1,5 +1,4 @@
 /* eslint-disable */
-import DashIcon from 'components/icons/DashIcon';
 import NavLink from 'components/link/NavLink';
 import { usePathname } from 'next/navigation';
 import { useCallback } from 'react';
@@ -27,7 +26,7 @@ export const SidebarLinks = (props: { routes: RoutesType[] }): JSX.Element => {
             >
               <div className='flex'>
                 <span>
-                  {route.icon ? route.icon : <DashIcon />}{' '}
+                  {route.icon ? route.icon : <></>}{' '}
                 </span>
                 <p
                   className={`leading-1 ml-4 flex ${(activeRoute(route.path))

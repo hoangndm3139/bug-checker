@@ -11,7 +11,7 @@ const Header = () => {
           </p>
         </div>
       </div>
-      <UserButton afterSignOutUrl='/auth/sign-in'/>
+      <UserButton afterSignOutUrl='/auth/login'/>
     </nav>
   );
 };

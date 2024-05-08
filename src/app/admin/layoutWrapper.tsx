@@ -20,17 +20,13 @@ import routes from 'routes';
 import InputField from "../../components/fields/InputField";
 import subRoutes from "../../subRoutes";
 import { getPathFromPathname, isNestedRoute } from "../../utils/navigation";
-import { useUser } from "@clerk/nextjs";
 
 const queryClient = new QueryClient()
 
 export default function LayoutWrapper({ children }: { children: React.ReactNode }) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
-  const { id } = useParams();
-  const { user } = useUser();
-  console.log(user);
-  
+  const { id, feedbackId } = useParams();
 
   return (
     <div className="flex flex-col h-screen w-full bg-[#F1F5F9] dark:bg-background-900">
@@ -41,7 +37,9 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
       <div className="font-dm flex-1">
         <main className="h-full w-full">
           <div className='flex gap-2 h-full'>
-            <Sidebar routes={isNestedRoute(pathname, id) ? subRoutes : routes} open={open} setOpen={setOpen} variant="admin" />
+            <div className={`${feedbackId && 'hidden'}`}>
+              <Sidebar routes={isNestedRoute(pathname, id) ? subRoutes : routes} open={open} setOpen={setOpen} variant="admin" />
+            </div>
             <div className='flex-1 bg-[#F8FAFC]'>
               <QueryClientProvider client={queryClient}>
                 {children}
